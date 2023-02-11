@@ -7,8 +7,7 @@ meet_list = [0] * n
 for i in range(n):
     meet_list[i] = list(map(int,input().split()))
 
-meet_list.sort(key = lambda x : x[0])
-meet_list.sort(key = lambda x : x[1])
+meet_list.sort(key = lambda x : (x[0], x[1]))
 
 cnt = 1
 pre_meet = meet_list[0]
@@ -19,4 +18,3 @@ for i in range(1,n):
         cnt += 1
 
 print(cnt)
-
